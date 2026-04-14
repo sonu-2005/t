@@ -1,6 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
-
 int main()
 {
     int a,b,c,c1,c2,c3;
