@@ -6,9 +6,6 @@ int main()
 {
 int locks, stocks, barrels, t_sales, flag = 0;
 float commission;
-
-clrscr();
-
 printf("Enter the total number of locks");
 scanf("%d",&locks);
 if ((locks <= 0) || (locks > 70))
