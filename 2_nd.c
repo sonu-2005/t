@@ -2,7 +2,7 @@
 #include<conio.h>
 #include<stdlib.h>
 
-void main()
+int main( )
 {
 int month[12]={31,28,31,30,31,30,31,31,30,31,30,31};
 int d,m,y,nd,nm,ny,ndays;
@@ -10,17 +10,15 @@ int d,m,y,nd,nm,ny,ndays;
 printf("enter the date,month,year");
 scanf("%d%d%d",&d,&m,&y);
 
-if(y<=1812 || y>2012)
+if(y<1812 || y>2013)
 {
 printf("Invalid Input Year");
-getch();
 exit(0);
 }
 
 if(m<1 || m>12)
 {
 printf("Invalid Input Month");
-getch();
 exit(0);
 }
 
@@ -28,24 +26,24 @@ ndays=month[m-1];
 
 if(m==2)
 {
- if(y%100==0)
- {
-  if(y%400==0)
-   ndays=29;
- }
- else if(y%4==0)
-  ndays=29;
+if(y%100==0)
+{
+if(y%400==0)
+ndays=29;
+}
+else if(y%4==0)
+ndays=29;
 }
 
 if(d<=0 || d>ndays)
 {
 printf("Invalid Input Day");
-getch();
 exit(0);
 }
 
 nd=d+1;
-nm=m; ny=y;
+nm=m;
+ny=y;
 
 if(nd>ndays)
 {
@@ -60,7 +58,7 @@ ny++;
 }
 
 printf("\n Given date is %d:%d:%d",d,m,y);
-printf("\n Next day’s date is %d:%d:%d",nd,nm,ny);
+printf("\n Next day's date is %d:%d:%d",nd,nm,ny);
 
-getch();
+getch( );
 }
